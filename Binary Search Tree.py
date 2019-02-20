@@ -35,7 +35,7 @@ class Node:
     #             current = current.left
     #         self.data = current.data
     #         self.right.remove(self.right.data)
-            return
+    #         return
     def find(self,data):
         if data == self.data:
             print(f"Found {data} in this binary tree.")

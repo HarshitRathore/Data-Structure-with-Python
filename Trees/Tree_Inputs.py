@@ -5,6 +5,9 @@ for test in range(testcases):
     # Where 1 2 L means "2 is in left of 1"
     edge_count = int(input())
     nodes = input().split(' ')
+    for i in range(len(nodes)):
+        if nodes[i] in '0123456789':
+            nodes[i] = int(nodes[i])
     print(f'Root Node: {nodes[0]}')
     for i in range(edge_count):
         if nodes[i*3+2] == 'L':

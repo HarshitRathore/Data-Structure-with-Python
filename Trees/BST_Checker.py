@@ -82,6 +82,9 @@ for test in range(testcases):
     #########################################
     edge_count = int(input())
     nodes = input().split(' ')
+    for i in range(len(nodes)):
+        if nodes[i] in '0123456789':
+            nodes[i] = int(nodes[i])
     tree = Node(nodes[0])
     for i in range(edge_count):
         root, data, direction = nodes[i*3], nodes[i*3+1], nodes[i*3+2]
@@ -93,7 +96,7 @@ for test in range(testcases):
     # print()
     # tree.show_post()
     # print()
-    
+
     tree.check_bst()
 
     #######################################

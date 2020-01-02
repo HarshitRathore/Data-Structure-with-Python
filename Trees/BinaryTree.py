@@ -62,6 +62,9 @@ for test in range(testcases):
     #########################################
     edge_count = int(input())
     nodes = input().split(' ')
+    for i in range(len(nodes)):
+        if nodes[i] in '0123456789':
+            nodes[i] = int(nodes[i])
     # print(f'Adding Root Node: {nodes[0]}')
     tree = Node(nodes[0])
     for i in range(edge_count):
